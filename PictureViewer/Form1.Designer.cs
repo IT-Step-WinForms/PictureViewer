@@ -40,25 +40,26 @@
             this.HelpItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FilesList = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.Reset = new System.Windows.Forms.Button();
+            this.Stop = new System.Windows.Forms.Button();
+            this.Start = new System.Windows.Forms.Button();
+            this.Forward = new System.Windows.Forms.Button();
+            this.Backword = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.ViewBox = new System.Windows.Forms.PictureBox();
-            this.Backword = new System.Windows.Forms.Button();
-            this.Forward = new System.Windows.Forms.Button();
-            this.Start = new System.Windows.Forms.Button();
-            this.Stop = new System.Windows.Forms.Button();
-            this.Reset = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ViewBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.folderToolStripMenuItem,
@@ -84,7 +85,7 @@
             // 
             this.OpenItem.Name = "OpenItem";
             this.OpenItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.OpenItem.Size = new System.Drawing.Size(270, 34);
+            this.OpenItem.Size = new System.Drawing.Size(223, 34);
             this.OpenItem.Text = "&Open";
             this.OpenItem.Click += new System.EventHandler(this.OpenItem_Click);
             // 
@@ -92,7 +93,7 @@
             // 
             this.CloseItem.Name = "CloseItem";
             this.CloseItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.CloseItem.Size = new System.Drawing.Size(270, 34);
+            this.CloseItem.Size = new System.Drawing.Size(223, 34);
             this.CloseItem.Text = "&Close";
             this.CloseItem.Click += new System.EventHandler(this.CloseItem_Click);
             // 
@@ -100,7 +101,7 @@
             // 
             this.ExitItem.Name = "ExitItem";
             this.ExitItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.ExitItem.Size = new System.Drawing.Size(270, 34);
+            this.ExitItem.Size = new System.Drawing.Size(223, 34);
             this.ExitItem.Text = "&Exit";
             this.ExitItem.Click += new System.EventHandler(this.ExitItem_Click);
             // 
@@ -117,14 +118,14 @@
             // 
             this.ProgrammItem.Name = "ProgrammItem";
             this.ProgrammItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.ProgrammItem.Size = new System.Drawing.Size(270, 34);
+            this.ProgrammItem.Size = new System.Drawing.Size(244, 34);
             this.ProgrammItem.Text = "&Program";
             // 
             // AuthorItem
             // 
             this.AuthorItem.Name = "AuthorItem";
             this.AuthorItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.AuthorItem.Size = new System.Drawing.Size(270, 34);
+            this.AuthorItem.Size = new System.Drawing.Size(244, 34);
             this.AuthorItem.Text = "&Author";
             // 
             // HelpItem
@@ -143,6 +144,7 @@
             this.FilesList.ScrollAlwaysVisible = true;
             this.FilesList.Size = new System.Drawing.Size(232, 435);
             this.FilesList.TabIndex = 1;
+            this.FilesList.SelectedIndexChanged += new System.EventHandler(this.FilesList_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -162,72 +164,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Управление";
             // 
-            // groupBox2
+            // label1
             // 
-            this.groupBox2.Controls.Add(this.ViewBox);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(232, 36);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1296, 335);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Просмотр";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(815, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 22);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "0%";
             // 
-            // ViewBox
+            // progressBar1
             // 
-            this.ViewBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ViewBox.Image = global::PictureViewer.Properties.Resources.logo;
-            this.ViewBox.Location = new System.Drawing.Point(3, 24);
-            this.ViewBox.Name = "ViewBox";
-            this.ViewBox.Size = new System.Drawing.Size(1290, 308);
-            this.ViewBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ViewBox.TabIndex = 0;
-            this.ViewBox.TabStop = false;
-            // 
-            // Backword
-            // 
-            this.Backword.Location = new System.Drawing.Point(15, 27);
-            this.Backword.Name = "Backword";
-            this.Backword.Size = new System.Drawing.Size(95, 61);
-            this.Backword.TabIndex = 0;
-            this.Backword.Text = "<<<";
-            this.Backword.UseVisualStyleBackColor = true;
-            // 
-            // Forward
-            // 
-            this.Forward.Location = new System.Drawing.Point(128, 27);
-            this.Forward.Name = "Forward";
-            this.Forward.Size = new System.Drawing.Size(95, 61);
-            this.Forward.TabIndex = 1;
-            this.Forward.Text = ">>>";
-            this.Forward.UseVisualStyleBackColor = true;
-            // 
-            // Start
-            // 
-            this.Start.Location = new System.Drawing.Point(245, 27);
-            this.Start.Name = "Start";
-            this.Start.Size = new System.Drawing.Size(78, 61);
-            this.Start.TabIndex = 2;
-            this.Start.Text = "Старт";
-            this.Start.UseVisualStyleBackColor = true;
-            // 
-            // Stop
-            // 
-            this.Stop.Location = new System.Drawing.Point(329, 27);
-            this.Stop.Name = "Stop";
-            this.Stop.Size = new System.Drawing.Size(81, 61);
-            this.Stop.TabIndex = 3;
-            this.Stop.Text = "Стоп";
-            this.Stop.UseVisualStyleBackColor = true;
-            // 
-            // Reset
-            // 
-            this.Reset.Location = new System.Drawing.Point(416, 27);
-            this.Reset.Name = "Reset";
-            this.Reset.Size = new System.Drawing.Size(76, 61);
-            this.Reset.TabIndex = 4;
-            this.Reset.Text = "Сброс";
-            this.Reset.UseVisualStyleBackColor = true;
+            this.progressBar1.Location = new System.Drawing.Point(624, 44);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(415, 32);
+            this.progressBar1.TabIndex = 6;
             // 
             // numericUpDown1
             // 
@@ -253,21 +204,72 @@
             0,
             0});
             // 
-            // progressBar1
+            // Reset
             // 
-            this.progressBar1.Location = new System.Drawing.Point(624, 44);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(415, 32);
-            this.progressBar1.TabIndex = 6;
+            this.Reset.Location = new System.Drawing.Point(416, 27);
+            this.Reset.Name = "Reset";
+            this.Reset.Size = new System.Drawing.Size(76, 61);
+            this.Reset.TabIndex = 4;
+            this.Reset.Text = "Сброс";
+            this.Reset.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // Stop
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(815, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 22);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "0%";
+            this.Stop.Location = new System.Drawing.Point(329, 27);
+            this.Stop.Name = "Stop";
+            this.Stop.Size = new System.Drawing.Size(81, 61);
+            this.Stop.TabIndex = 3;
+            this.Stop.Text = "Стоп";
+            this.Stop.UseVisualStyleBackColor = true;
+            // 
+            // Start
+            // 
+            this.Start.Location = new System.Drawing.Point(245, 27);
+            this.Start.Name = "Start";
+            this.Start.Size = new System.Drawing.Size(78, 61);
+            this.Start.TabIndex = 2;
+            this.Start.Text = "Старт";
+            this.Start.UseVisualStyleBackColor = true;
+            // 
+            // Forward
+            // 
+            this.Forward.Location = new System.Drawing.Point(128, 27);
+            this.Forward.Name = "Forward";
+            this.Forward.Size = new System.Drawing.Size(95, 61);
+            this.Forward.TabIndex = 1;
+            this.Forward.Text = ">>>";
+            this.Forward.UseVisualStyleBackColor = true;
+            // 
+            // Backword
+            // 
+            this.Backword.Location = new System.Drawing.Point(15, 27);
+            this.Backword.Name = "Backword";
+            this.Backword.Size = new System.Drawing.Size(95, 61);
+            this.Backword.TabIndex = 0;
+            this.Backword.Text = "<<<";
+            this.Backword.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.ViewBox);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(232, 36);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1296, 335);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Просмотр";
+            // 
+            // ViewBox
+            // 
+            this.ViewBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ViewBox.Image = global::PictureViewer.Properties.Resources.logo;
+            this.ViewBox.Location = new System.Drawing.Point(3, 24);
+            this.ViewBox.Name = "ViewBox";
+            this.ViewBox.Size = new System.Drawing.Size(1290, 308);
+            this.ViewBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ViewBox.TabIndex = 0;
+            this.ViewBox.TabStop = false;
             // 
             // Form1
             // 
@@ -289,9 +291,9 @@
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ViewBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
