@@ -1,0 +1,10 @@
+C:\Cloud\Google Drive\Pavlo\09-WinForms\Classwork\04\PictureViewer\PictureViewer\bin\Debug\PictureViewer.exe.config
+C:\Cloud\Google Drive\Pavlo\09-WinForms\Classwork\04\PictureViewer\PictureViewer\bin\Debug\PictureViewer.exe
+C:\Cloud\Google Drive\Pavlo\09-WinForms\Classwork\04\PictureViewer\PictureViewer\bin\Debug\PictureViewer.pdb
+C:\Cloud\Google Drive\Pavlo\09-WinForms\Classwork\04\PictureViewer\PictureViewer\obj\Debug\PictureViewer.csprojAssemblyReference.cache
+C:\Cloud\Google Drive\Pavlo\09-WinForms\Classwork\04\PictureViewer\PictureViewer\obj\Debug\PictureViewer.Form1.resources
+C:\Cloud\Google Drive\Pavlo\09-WinForms\Classwork\04\PictureViewer\PictureViewer\obj\Debug\PictureViewer.Properties.Resources.resources
+C:\Cloud\Google Drive\Pavlo\09-WinForms\Classwork\04\PictureViewer\PictureViewer\obj\Debug\PictureViewer.csproj.GenerateResource.cache
+C:\Cloud\Google Drive\Pavlo\09-WinForms\Classwork\04\PictureViewer\PictureViewer\obj\Debug\PictureViewer.csproj.CoreCompileInputs.cache
+C:\Cloud\Google Drive\Pavlo\09-WinForms\Classwork\04\PictureViewer\PictureViewer\obj\Debug\PictureViewer.exe
+C:\Cloud\Google Drive\Pavlo\09-WinForms\Classwork\04\PictureViewer\PictureViewer\obj\Debug\PictureViewer.pdb
